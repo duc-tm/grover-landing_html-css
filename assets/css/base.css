@@ -53,9 +53,10 @@ body {
   background-color: #fff;
 }
 
-.more-btn {
+.btn-lg {
   padding: 24px 40px;
   font-size: 2rem;
+  font-weight: 500;
   font-weight: 500;
 }
 

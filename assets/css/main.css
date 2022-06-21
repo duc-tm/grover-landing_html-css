@@ -1,3 +1,5 @@
+/* header */
+
 .header {
   padding-top: 45px;
   padding-bottom: 39px;
@@ -18,16 +20,25 @@
   gap: 40px;
 }
 
-.header .nav-link {
+.header-nav .nav-link {
   color: #4D4D4D;
 }
 
-.header .nav-link.active {
+.header-nav .nav-link.active {
   color: var(--primary-color);
   font-weight: 600;
 }
 
+.header-nav .tablet-search {
+  display: none;
+}
+
 .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-action {
   --badge-size: 28px;
   margin-right: calc(var(--badge-size) / 2);
   border-radius: 8px;
@@ -40,7 +51,7 @@
   position: relative;
 }
 
-.header-right .search-input {
+.header .search-input {
   font-size: 1.4rem;
   font-weight: 500;
   padding: 17px 10px 17px 44px;
@@ -97,11 +108,11 @@
 
 .section-intro-container {
   display: flex;
+  gap: 38px;
 }
 
 .section-intro-hero {
   flex: 0 0 50%;
-  margin-right: 38px;
   margin-top: 59px;
 }
 
@@ -139,6 +150,7 @@
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-color);
+  letter-spacing: -0.01em;
 }
 
 .section-intro-heading .emphasize {
@@ -150,6 +162,8 @@
   margin-top: 60px;
   display: flex;
   align-items: center;
+  gap: 34px;
+  flex-wrap: wrap;
 }
 
 .section-intro-action .btn {
@@ -157,12 +171,7 @@
   font-weight: 500;
 }
 
-.section-intro-action .btn-order {
-  padding: 24px 40px;
-}
-
 .section-intro-action .btn-play {
-  margin-left: 34px;
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -171,7 +180,7 @@
 
 .section-intro-action .btn-play .play-icon {
   margin-right: 16px;
-  padding: 20px 14px 0;
+  padding: 18px 10px 1px 12px;
   border: 1px solid transparent;
   border-radius: 50%;
   box-shadow: 0 20px 49px -10px rgba(0, 0, 0, 0.08)
@@ -187,6 +196,7 @@
 }
 
 .section-intro-image .product {
+  padding: 0 15px;
   position: absolute;
   left: 0;
   top: 106px;
@@ -229,14 +239,14 @@
 }
 
 .section-intro-image .product-price {
-  margin-top: 16px;
-  margin-bottom: 6px;
+  margin-top: 12px;
+  margin-bottom: 2px;
   font-size: 2.2rem;
   font-weight: 700;
 }
 
 .section-intro-image .product-shipping {
-  padding-bottom: 54px;
+  padding-bottom: 50px;
   font-size: 1rem;
   font-weight: 500;
   color: #A5A5A5;
@@ -253,7 +263,7 @@
   transform: translate(-50%, 50%);
 }
 
-.section-intro-image .delivary {
+.section-intro-image .delivery {
   padding: 18px 21px;
   border-radius: 12px;
   position: absolute;
@@ -266,17 +276,17 @@
   box-shadow: 0 40px 70px -10px rgba(0, 0, 0, 0.08);
 }
 
-.section-intro-image .delivary-content {
+.section-intro-image .delivery-content {
   margin-left: 18px;
 }
 
-.section-intro-image .delivary-title {
+.section-intro-image .delivery-title {
   display: block;
   font-weight: 600;
   color: var(--text-color);
 }
 
-.section-intro-image .delivary-time {
+.section-intro-image .delivery-time {
   display: block;
   font-size: 1.2rem;
   font-weight: 500;
@@ -322,6 +332,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
 
@@ -372,15 +383,18 @@
 
 /* section why choose us */
 
+.section-why {
+  padding: 140px 0 88px;
+}
+
 .section-why-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 140px 0 88px;
+  gap: 30px 176px;
 }
 
 .section-why-image {
-  margin-right: 176px;
   position: relative;
 }
 
@@ -460,7 +474,7 @@
 /* section delivery */
 
 .section-delivery {
-  padding: 52px 0 79px;
+  padding: 52px 0 180px;
 }
 
 .section-delivery-container {
@@ -545,7 +559,7 @@
 .section-download-action {
   margin-top: 60px;
   display: flex;
-  column-gap: 30px;
+  gap: 30px;
 }
 
 .section-download-action .btn-download {
@@ -578,6 +592,10 @@
   max-width: 266px;
 }
 
+.footer-logo img {
+  margin: 0;
+}
+
 .footer-desc {
   font-size: 1.6rem;
   line-height: 1.625;
@@ -592,9 +610,10 @@
 }
 
 .footer-links .footer-link {
+  padding: 10px 0;
+  display: inline-block;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 2.5;
   color: var(--text-secondary);
 }
 
@@ -607,14 +626,16 @@
   justify-content: space-between;
 }
 
+.footer-copyright-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 25px;
+}
+
 .footer-copyright-link {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: calc(25 / 14);
   color: var(--text-secondary);
 }
-
-.footer-copyright-link:first-child {
-  margin-right: 25px;
-}
-

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 
   <title>Grover | Grocery Store</title>
 </head>
@@ -28,8 +29,8 @@
             <img alt="" srcset="./assets/images/logo.png 2x">
           </a>
         </div>
-        <nav class="header-nav">
-          <ul class="nav-list">
+        <nav class="header-nav" id="header-collapse">
+          <ul class="nav-list collapse-body">
             <li class="nav-item">
               <a href="" class="nav-link active">Home</a>
             </li>
@@ -42,18 +43,31 @@
             <li class="nav-item">
               <a href="" class="nav-link">Shop</a>
             </li>
+            <li class="nav-item">
+              <div class="tablet-search">
+                <input class="search-input" type="text" name="" id="" placeholder="Search">
+              </div>
+            </li>
           </ul>
         </nav>
         <div class="header-right">
-          <div class="header-search">
-            <img class="search-icon" src="./assets/icons/search.svg" alt="search icon">
-            <input class="search-input" type="text" name="" id="" placeholder="Search">
-          </div>
-          <div class="header-cart">
-            <img class="cart-icon" src="./assets/icons/cart.svg" alt="cart icon">
-            <div class="badge">
-              2
+          <div class="header-action">
+            <div class="header-search">
+              <img class="search-icon" src="./assets/icons/search.svg" alt="search icon">
+              <input class="search-input" type="text" name="" id="" placeholder="Search">
             </div>
+            <div class="header-cart">
+              <div class="cart-icon">
+                <img src="./assets/icons/cart.svg" alt="cart icon">
+              </div>
+              <div class="badge">
+                2
+              </div>
+            </div>
+          </div>
+          <div class="collapse-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
       </div>
@@ -78,7 +92,7 @@
               Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.
             </p>
             <div class="section-intro-action">
-              <button type="button" class="btn btn-primary btn-order">
+              <button type="button" class="btn btn-primary btn-lg btn-order">
                 Order Now
               </button>
               <button type="button" class="btn btn-play">
@@ -90,7 +104,7 @@
             </div>
           </div>
           <div class="section-intro-image">
-            <div class="product">
+            <div class="product decorator">
               <div class="product-image">
                 <img srcset="./assets/images/orange.png 2x" alt="orange">
               </div>
@@ -101,16 +115,16 @@
                 <img src="./assets/icons/cart-plus.svg" alt="add to cart">
               </button>
             </div>
-            <div class="delivary">
-              <div class="delivary-image">
+            <div class="delivery decorator">
+              <div class="delivery-image">
                 <img src="./assets/icons/alarm-clock.svg" alt="alarm clock">
               </div>
-              <div class="delivary-content">
-                <span class="delivary-title">Delivary</span>
-                <span class="delivary-time">30 Min</span>
+              <div class="delivery-content">
+                <span class="delivery-title">Delivary</span>
+                <span class="delivery-time">30 Min</span>
               </div>
             </div>
-            <div class="abstract-image">
+            <div class="abstract-image decorator">
               <img srcset="./assets/images/spiral-arrow.png 2x" alt="spiral arrow">
             </div>
             <div class="main-image">
@@ -217,7 +231,7 @@
             <p class="section-why-reason text text-lg">
               At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesen voluptatum deleniti.
             </p>
-            <button type="button" class="btn btn-primary more-btn">
+            <button type="button" class="btn btn-primary btn-lg">
               Explore Now
             </button>
           </div>
@@ -238,7 +252,7 @@
               At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
               atque corrupti quos
             </p>
-            <button type="button" class="btn btn-outline more-btn">
+            <button type="button" class="btn btn-outline btn-lg">
               Explore Now
             </button>
           </div>
@@ -384,6 +398,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./assets/scripts/header-collapse.js"></script>
 </body>
 
 </html>
